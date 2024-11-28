@@ -3,7 +3,7 @@ import { format } from 'date-fns';
 import { Ticket } from '../lib/supabase';
 import { CheckCircle, XCircle, Clock } from 'lucide-react';
 
-export function TicketList({ tickets }: { tickets: Ticket[] }) {
+export function TicketList({ tickets, onEdit, onExpire }: { tickets: Ticket[]; onEdit: (ticket: Ticket) => void; onExpire: (id: string) => void; }) {
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'valid':
@@ -47,6 +47,10 @@ export function TicketList({ tickets }: { tickets: Ticket[] }) {
                     {getStatusIcon(ticket.status)}
                     <span className="ml-2 capitalize">{ticket.status}</span>
                   </div>
+                </td>
+                <td>
+                  <button onClick={() => onEdit(ticket)}>Edit</button>
+                  <button onClick={() => onExpire(ticket.id)}>Expire</button>
                 </td>
               </tr>
             ))}

@@ -5,7 +5,7 @@ import { SocialMedia } from '../components/SocialMedia';
 
 export function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-100">
       {/* Hero Section */}
       <section className="relative h-screen">
         <div className="absolute inset-0">

@@ -19,7 +19,7 @@ export function Header() {
         <div className="flex items-center space-x-6">
           <Link to="/" className="hover:text-gray-300 transition">Home</Link>
           {user && (
-            <Link to="/dashboard" className="flex items-center space-x-2 hover:text-gray-300 transition">
+            <Link to="/login" className="flex items-center space-x-2 hover:text-gray-300 transition">
               <Ticket className="w-5 h-5" />
               <span>Manage Tickets</span>
             </Link>

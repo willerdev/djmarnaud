@@ -63,7 +63,7 @@ export function BookingModal({ isOpen, onClose, eventId, eventTitle, price }: Bo
             <input
               type="text"
               required
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black"
+              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black text-black"
               value={formData.customer_name}
               onChange={(e) => setFormData(prev => ({ ...prev, customer_name: e.target.value }))}
             />
@@ -74,7 +74,7 @@ export function BookingModal({ isOpen, onClose, eventId, eventTitle, price }: Bo
             <input
               type="email"
               required
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black"
+              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black text-black"
               value={formData.customer_email}
               onChange={(e) => setFormData(prev => ({ ...prev, customer_email: e.target.value }))}
             />
@@ -83,7 +83,7 @@ export function BookingModal({ isOpen, onClose, eventId, eventTitle, price }: Bo
           <div>
             <label className="block text-sm font-medium text-gray-700">Payment Method</label>
             <select
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black"
+              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black text-black"
               value={formData.payment_method}
               onChange={(e) => setFormData(prev => ({ ...prev, payment_method: e.target.value }))}
             >
